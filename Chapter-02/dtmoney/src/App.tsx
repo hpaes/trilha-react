@@ -3,6 +3,7 @@ import { Header } from "./components/Header/index";
 import { Dashboard } from "./components/Dashboard/index";
 import Modal from "react-modal";
 import { useState } from "react";
+import { NewTransactionModal } from "./components/NewTransactionModal/index";
 
 Modal.setAppElement("#root");
 
@@ -24,12 +25,10 @@ export function App() {
 
       <Dashboard />
 
-      <Modal
+      <NewTransactionModal
         isOpen={isNewTransactionModalOpen}
         onRequestClose={handleCloseNewTransactionModal}
-      >
-        <h2>Cadastrar Transação</h2>
-      </Modal>
+      />
 
       <GlobalStyle />
     </>
